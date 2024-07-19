@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../images/87904deacf9b547a95f019e0a322152a.jpg');
+}
+
+.logo {
+    width: 20rem;
+    align-items: center;
+    margin-left: 33rem;
+    margin-top: 2rem;
+    animation: animate 1s ease-in 0.3s 1 backwards;
+}
+
+.card {
+    width: 90%;
+    max-width: 470px;
+    background: url(../images/5100c3866047b4036d3131eac80b50e7.jpg);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    margin-bottom: 3rem;
+    animation: animate 1.5s ease-in 0.3s 1 backwards;
+
+}
+
+.search {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.weather p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+
+.weather input {
+    border: 0 ;
+    outline: 0;
+    background: #ebfffc;
+    color: #000;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 15px;
+    width: 100%;
+    margin: 0.8rem;
+}
+
+.weather button {
+    border: 0 ;
+    outline: 0;
+    background: url('../images/d39941147f626d43513bf25aee5f9f4f.jpg');
+    color: #fff;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 15px;
+    width: 100%;
+    margin: 0.8rem;
+}
+
+.weather button:hover {
+    transition: 2s;
+    background: url(../images/62107ecfbe289761d932a0c6fb134a91.jpg);
+    color: #fff;
+}
+
+.weather label {
+    margin-left: 2rem;
+}
+
+.weather input::placeholder {
+    color: #000;
+    padding-left: 1rem;
+}
+
+
+
+
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -8px;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col P{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity, .wind {
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+#preloader {
+    background: #000 url('../images//giphy.gif') no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+

